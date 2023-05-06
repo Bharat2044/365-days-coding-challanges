@@ -1,6 +1,8 @@
 // Question Link: https://www.interviewbit.com/problems/reverse-the-string/
 
 /*
+Reverse the String:
+
 Problem Description:
 You are given a string A of size N.
 Return the string A after reversing the string word by word.
