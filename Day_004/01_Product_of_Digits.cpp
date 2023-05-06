@@ -1,4 +1,8 @@
+// Question Link: https://www.interviewbit.com/problems/product-of-digits/
+
 /*
+Product of Digits:
+
 Problem Description:
 Given an integer A.
 Find the product of all of it's digits.
