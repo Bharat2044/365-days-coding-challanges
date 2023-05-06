@@ -1,6 +1,8 @@
 // Question Link: https://www.interviewbit.com/problems/greater-than-all/
 
 /*
+Greater than All.:
+
 Problem Description:
 Given an integer array A.
 Find the count of elements whose value is greater than all of its previous elements.
