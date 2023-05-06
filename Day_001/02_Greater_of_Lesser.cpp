@@ -1,4 +1,4 @@
-// Question Link : https://www.interviewbit.com/problems/greater-of-lesser/discussion/p/simple-c-solution-in-tc-o-n/295727/2849/
+// Question Link : https://www.interviewbit.com/problems/greater-of-lesser
 
 /*
 Problem Description:
