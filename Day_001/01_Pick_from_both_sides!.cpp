@@ -1,4 +1,4 @@
-// Question Link : https://www.interviewbit.com/problems/pick-from-both-sides/discussion/p/not-needed-prefix-sum-and-suffix-sum-its-a-kind-of-sliding-window/368658/2021/
+// Question Link : https://www.interviewbit.com/problems/pick-from-both-sides
 
 /*
 Problem Description:
