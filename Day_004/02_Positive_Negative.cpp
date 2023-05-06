@@ -1,6 +1,8 @@
 // Question Link: https://www.interviewbit.com/problems/positive-negative/
 
 /*
+Positive Negative:
+
 Problem Description:
 Given an integer array A.
 Find the number of positive and negative integers in it an return them in an array.
