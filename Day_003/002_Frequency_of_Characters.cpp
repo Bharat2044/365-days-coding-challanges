@@ -1,6 +1,8 @@
 // Question Link: https://www.interviewbit.com/problems/frequency-of-characters/
 
 /*
+Frequency of Characters:
+
 Problem Description:
 Given a string A, find the frequency of all the characters in it.
 
