@@ -1,8 +1,9 @@
 // Question Link : https://www.interviewbit.com/problems/pick-from-both-sides
 
 /*
-Problem Description:
+Pick from both sides:
 
+Problem Description:
 Given an integer array A of size N.
 You have to pick exactly B elements from either left or right end of the array A to get the maximum sum.
 Find and return this maximum possible sum.
