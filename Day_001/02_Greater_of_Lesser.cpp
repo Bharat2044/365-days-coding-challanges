@@ -1,6 +1,8 @@
 // Question Link : https://www.interviewbit.com/problems/greater-of-lesser
 
 /*
+Greater of Lesser:
+
 Problem Description:
 Given two integer arrays A and B, and an integer C.
 Find the number of integers in A which are greater than C and find the number of integers in B which are less than C.
