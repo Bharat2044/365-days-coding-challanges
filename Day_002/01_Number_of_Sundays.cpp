@@ -1,6 +1,8 @@
 // Question Link: https://www.interviewbit.com/problems/number-of-sundays/
 
 /*
+Number of Sundays:
+
 Problem Description:
 Given the start day of the month A and number of days in the month B, find number of sundays in the month.
 
