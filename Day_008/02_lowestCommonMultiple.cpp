@@ -56,6 +56,6 @@ long gcd(int x, int y) {
 
 long Solution::solve(int A, int B) {    
     
-    long ans = (A*B)/gcd(A, B);
-    return  ans;
+    // return (A*B)/gcd(A, B);
+    return  A/(gcd(A, B))*B;
 }
