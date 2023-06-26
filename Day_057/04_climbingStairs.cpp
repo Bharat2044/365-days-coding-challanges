@@ -47,7 +47,7 @@ public:
         return b;
 
 
-        // Approach - 2: TC = O(n), SC = O(1)
+        // Approach - 2: TC = O(n), SC = O(n)
         /*if(n <= 2)
             return n;
         
