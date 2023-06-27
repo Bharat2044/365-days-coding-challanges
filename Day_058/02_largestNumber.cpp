@@ -39,7 +39,7 @@ public:
         if(v[0]=="0")
             return "0";
 
-        string an s = "";
+        string ans = "";
         for(string x: v)
             ans += x;
 
