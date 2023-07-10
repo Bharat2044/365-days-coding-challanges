@@ -26,17 +26,14 @@ int main() {
 			if(a[i]<=a[i+1]){
 				if((a[i+1]-a[i])<=u){
 					f++;
-				}
-				
+				}				
 				else{
 				    break;
 				}
 			}
-
 			else{
 				if(a[i]-a[i+1]<=d){
 					f++;
-
 				}
 				
 				else if(b){
