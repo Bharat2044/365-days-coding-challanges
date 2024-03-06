@@ -58,97 +58,76 @@ Both strings are their original self at time 1.
 */
 
 
-#define pb push_back
-#define mp make_pair
-#define fi first.first
-#define se first.second
-#define MOD 1000000007
-#define ms(s, n) memset(s, n, sizeof(s))
-#define prec(n) fixed<<setprecision(n)
-#define eps 0.000001
-#define all(v) v.begin(), v.end()
-#define bolt ios::sync_with_stdio(0)
-#define forr(i,p,n) for(ll i=p;i<n;i++)
-typedef long long ll;
 
-ll mult(ll a,ll b, ll p=MOD){return ((a%p)*(b%p))%p;}
-ll add(ll a, ll b, ll p=MOD){return (a%p + b%p)%p;}
-ll fpow(ll n, ll k, ll p = MOD) {ll r = 1; for (; k; k >>= 1) {if (k & 1) r = r * n%p; n = n * n%p;} return r;}
-ll inv(ll a, ll p = MOD) {return fpow(a, p - 2, p);}
+public class Solution {
+   
+final static int mod = 1000000007;
+ 
 
-ll com(string s){
-	ll lps[100003]={0};
-    lps[0]=0;
-    ll len=0;
-    ll p=1;
-    while(p<s.length()){
-        if(s[p]==s[len]){
-            len++;
-            lps[p]=len;
-            p++;
-        }else{
-            if(len!=0){
-                len=lps[len-1];
-            }else{
-                lps[p]=0;
-                p++;
-            }
+    public int solve(String[] A) {
+        int n=A.length;
+        long arr[]=new long[n];
+        for(int i=0;i<arr.length;i++)
+        arr[i]=(long)findTime(A[i]);
+        
+        //System.out.println(Arrays.toString(arr));
+       long ans=1;
+        for(int i=0;i<arr.length;i++){
+        for(int j=i+1;j<arr.length && arr[i]!=1 ;j++){
+            arr[j] = arr[j]/__gcd(arr[j], arr[i]);
         }
+        ans = (ans%mod*(arr[i])%mod)%mod;
     }
-    len=lps[s.length()-1];
-    if(s.length()%(s.length()-len)==0){
-		return s.length()-len;
-    }else return s.length();
-}
-
-ll spf[300003];
-
-void spff(){
-	spf[1] = 1;
-    for (ll i=2;i<300003;i++)
-    	spf[i] = i;
-
-    for (ll i=4; i<300003; i+=2)
-        spf[i] = 2;
-
-    for (ll i=3; i*i<300003; i++)
+    return (int)ans%mod;
+    }
+    static long __gcd(long a, long b) 
+  { 
+    return b == 0? a:__gcd(b, a % b);    
+  }
+    public int findTime(String str)
     {
-        if (spf[i] == i)
+        int n=str.length();
+        int k=findSmallest(str);
+        for(int i=1;i<=2*n;i++)
         {
-            for (ll j=i*i; j<300003; j+=i)
-                if (spf[j]==j)
-                    spf[j] = i;
+            if((long)((long)i*(i+1)/2)%(long)k==0)
+            return i;
         }
+        return -1;
     }
-}
-
-int Solution::solve(vector<string> &s) {
-    spff();
-    ll n=s.size();
-    assert(n >= 1 && n <= 100); 
-	ll maxx=0;
-    ll res[200003]={0};
-	for(ll i=0;i<n;i++){
-		ll len=com(s[i]);
-        for(ll i=1;;i++){
-            if(((i*(i+1))/2)%len==0){
-				ll temp=i;
-				while(temp!=1){
-					ll r=spf[temp];
-					ll cnt=0;
-					while(temp%r==0){
-						cnt++;
-						temp/=r;
-					}
-					res[r]=max(res[r],cnt);
-				}
-				break;
+     int findSmallest(String s) {
+        int n=s.length();
+        int lps[]=new int[n];
+        lps[0]=0;
+        int len=0;
+        int i=1;
+        while(i<n)
+        {
+            if(s.charAt(len)==s.charAt(i))
+            {
+                len++;
+                lps[i]=len;
+                i++;
+            }
+            else
+            {
+                if(len==0)
+                {
+                    lps[i]=0;i++;
+                }
+                else
+                {
+                    len=lps[len-1];
+                }
             }
         }
-	}
-	ll ans=1;
-	for(ll i=1;i<=200000;i++){
-		ans=mult(ans,fpow(i,res[i]));
-	}
-	return ans;
-}
+        int t1 = lps[n-1];
+        int t2 = n-t1;
+        if(t1 < t2) return n;
+        else if(t1 % t2 != 0) return n;
+        else return t2;
+        }
+    }
+    
+
+
