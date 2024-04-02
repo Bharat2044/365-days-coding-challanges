@@ -1,1 +1,1 @@
-# `300 days of coding challanges`
+# `365 days of coding challanges`
