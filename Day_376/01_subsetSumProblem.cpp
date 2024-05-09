@@ -2,7 +2,7 @@
 
 /*
 Subset Sum Problem!
-
+ 
 Problem Description:
 Given an integer array A  of size N.
 You are also given an integer B, you need to find whether their exist a subset in A whose sum equal B.
